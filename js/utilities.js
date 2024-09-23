@@ -40,13 +40,17 @@ function history(id, title) {
          ${id} Taka is Donated for ${title}
         </p>
         <p class="text-sm text-gray-500">
-        ${new Date().toLocaleString(Date, TimeRanges)}
+       
+        ${new Date().toLocaleDateString()}  ${new Date().toTimeString()}
+       
          
         </p>
   
   `;
 
   // historyContainer.appendChild(historyItem);
+
+  console.log(historyItem.innerText);
 
   historyContainer.insertBefore(historyItem, historyContainer.children[1]);
 }
