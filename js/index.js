@@ -42,6 +42,8 @@ document
     //   return;
     // }
 
+    
+
     const cardAmount = getTextValueById("amount-noakhali");
     const mainBalance = getTextValueById("main-balance");
 
