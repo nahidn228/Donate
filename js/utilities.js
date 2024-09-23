@@ -31,7 +31,7 @@ function history(id, title) {
     "border-2",
     "border-gray-300",
     "rounded-lg",
-    "p-6",
+    "md:p-6",
     "mb-4"
   );
 
@@ -46,6 +46,7 @@ function history(id, title) {
   
   `;
 
-  historyContainer.appendChild(historyItem);
-  historyItem.insertBefore(historyItem.firstChild);
+  // historyContainer.appendChild(historyItem);
+
+  historyContainer.insertBefore(historyItem, historyContainer.children[1]);
 }
