@@ -37,7 +37,7 @@ function history(id, title) {
 
   historyItem.innerHTML = `
 <p class="text-xl font-bold mb-2"> 
-         ${id} Taka is ${title}
+         ${id} Taka is Donated for ${title}
         </p>
         <p class="text-sm text-gray-500">
         ${new Date().toLocaleString(Date, TimeRanges)}
@@ -50,3 +50,5 @@ function history(id, title) {
 
   historyContainer.insertBefore(historyItem, historyContainer.children[1]);
 }
+
+function openPage() {}

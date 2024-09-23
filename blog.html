@@ -36,13 +36,13 @@
   </head>
   <body class="fontLexend">
     <!-- This is NavBar -->
-    <header class="bg-nav-bg sticky top-0 z-10 pb-2">
+    <header class="backdrop-blur-lg sticky top-0 z-10 pb-2">
       <section class="">
         <div class="navbar w-11/12 md:max-w-screen-lg mx-auto">
           <div class="navbar-start">
             <a
               href="./index.html"
-              class="btn btn-ghost text-sm md:text-lg lg:text-xl bg-primary-color"
+              class="btn btn-ghost text-sm md:text-lg bg-primary-color"
               >Home</a
             >
           </div>
@@ -67,7 +67,15 @@
         </div>
       </section>
     </header>
-    <main class="w-11/12 md:max-w-screen-lg mx-auto mt-10">
+    <main class="w-11/12 md:max-w-screen-lg mx-auto my-10">
+      <div class="flex justify-center">
+        <img
+          class="rounded-xl w-full"
+          src="./assets/faq.gif"
+          alt=""
+          srcset=""
+        />
+      </div>
       <div class="collapse collapse-plus">
         <input type="radio" name="my-accordion-3" checked="checked" />
         <div class="collapse-title text-xl font-medium">
@@ -199,5 +207,7 @@
         </div>
       </div>
     </main>
+    <script src="./js/utilities.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>
