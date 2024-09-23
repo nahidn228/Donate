@@ -50,9 +50,9 @@ function history(id, title) {
 
   // historyContainer.appendChild(historyItem);
 
-  console.log(historyItem.innerText);
+  
 
   historyContainer.insertBefore(historyItem, historyContainer.children[1]);
 }
 
-function openPage() {}
+
