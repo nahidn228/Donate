@@ -42,10 +42,20 @@ document
     //   return;
     // }
 
-    
-
     const cardAmount = getTextValueById("amount-noakhali");
     const mainBalance = getTextValueById("main-balance");
+
+    if (isNaN(donateAmount) || donateAmount <= 0) {
+      alert("Please Type a valid amount ");
+      onclickDisable("noakhli-donate-now");
+      return;
+    }
+
+    if (donateAmount > mainBalance) {
+      document.getElementById("noakhli-donate-now").removeAttribute("onclick");
+      alert("Failed to Donate ");
+      return;
+    }
 
     const totalDonateAmount = cardAmount + donateAmount;
     document.getElementById("amount-noakhali").innerText = totalDonateAmount;
@@ -53,6 +63,12 @@ document
 
     document.getElementById("main-balance").innerText =
       mainBalance - donateAmount;
+
+    my_modal_5.showModal();
+    //history add
+    historyTitle = document.getElementById("noakhali-title").innerText;
+
+    history(donateAmount, historyTitle);
   });
 
 document
@@ -62,12 +78,30 @@ document
     const cardAmount = getTextValueById("amount-feni");
     const mainBalance = getTextValueById("main-balance");
 
+    if (isNaN(donateAmount) || donateAmount <= 0) {
+      alert("Please Type a valid amount ");
+      onclickDisable("feni-donate-now");
+      return;
+    }
+
+    if (donateAmount > mainBalance) {
+      onclickDisable("feni-donate-now");
+      alert("Failed to Donate ");
+      return;
+    }
+
     const totalDonateAmount = cardAmount + donateAmount;
     document.getElementById("amount-feni").innerText = totalDonateAmount;
     document.getElementById("input-feni").value = "";
 
     document.getElementById("main-balance").innerText =
       mainBalance - donateAmount;
+
+    my_modal_5.showModal();
+
+    //history add
+    historyTitle = document.getElementById("title-feni").innerText;
+    history(donateAmount, historyTitle);
   });
 document
   .getElementById("quota-donate-now")
@@ -76,10 +110,29 @@ document
     const cardAmount = getTextValueById("amount-quota");
     const mainBalance = getTextValueById("main-balance");
 
+    if (isNaN(donateAmount) || donateAmount <= 0) {
+      alert("Please Type a valid amount ");
+      onclickDisable("quota-donate-now");
+      return;
+    }
+
+    if (donateAmount > mainBalance) {
+      onclickDisable("quota-donate-now");
+      alert("Failed to Donate ");
+      return;
+    }
+
     const totalDonateAmount = cardAmount + donateAmount;
     document.getElementById("amount-quota").innerText = totalDonateAmount;
     document.getElementById("input-quota").value = "";
 
     document.getElementById("main-balance").innerText =
       mainBalance - donateAmount;
+
+    my_modal_5.showModal();
+
+    //history add
+
+    historyTitle = document.getElementById("title-quota").innerText;
+    history(donateAmount, historyTitle);
   });
